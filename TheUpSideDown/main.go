@@ -8,7 +8,7 @@ func main() {
 
 	var name string
 	fmt.Println("The Voice: Who are you?")
-	fmt.Printf("Enter your name:\t")
+	fmt.Printf("Enter Your Name:\t")
 
 	fmt.Scan(&name)
 
@@ -21,7 +21,7 @@ func main() {
 
 	if choice == "yes" {
 		fmt.Println("Hahahaha...")
-	} else if choice == "no" {
+	} else {
 		return
 	}
 
@@ -36,27 +36,27 @@ func main() {
 		return
 	}
 
-	var player string
-	fmt.Printf("\nChoose a player:\n")
+	var weapon string
+	fmt.Printf("\nChoose a weapon:\n")
 
-	player1 := "Tweleven"
-	fmt.Println(player1)
+	weapon1 := "Axe"
+	fmt.Println(weapon1, " 🪓")
 
-	player2 := "Steven"
-	fmt.Println(player2)
+	weapon2 := "Sword"
+	fmt.Println(weapon2, " 🗡️")
 
-	player3 := "Bustin"
-	fmt.Println(player3)
+	weapon3 := "Arrow"
+	fmt.Println(weapon3, " 🏹")
 
 	fmt.Printf("\n")
-	fmt.Scan(&player)
+	fmt.Scan(&weapon)
 
-	if player == "Tweleven" {
-		fmt.Println("Player selected: your weapon is the FORCE ✋")
-	} else if player == "Steven" {
-		fmt.Println("Player selected: your weapon is a Batton 🏏")
-	} else if player == "Bustin" {
-		fmt.Println("Player selected: your weapon is a Ray gun 🔫")
+	if weapon == "Axe" {
+		fmt.Println("Player selected: your weapon is an 🪓")
+	} else if weapon == "Sword" {
+		fmt.Println("Player selected: your weapon is a Sword 🗡️")
+	} else if weapon == "Arrow" {
+		fmt.Println("Player selected: your weapon is an Arrow 🏹")
 	} else {
 		return
 	}
@@ -64,36 +64,69 @@ func main() {
 	fmt.Println("\n----------------------------------    LEVEL 1    -----------------------------------------------")
 
 	fmt.Println("You're in the DemiGorgon's lair. You are attacked by one of his minions. ")
-	fmt.Println("\n                       THE KRAKEN 🐙        ")
+	fmt.Println("\n                        THE KRAKEN 🐙   [🖤🖤🖤🖤🖤]     ")
 
-	lives := "Lives"
-	fmt.Println(lives, ":❤️ ❤️ ❤️")
+	var lives string
+	fmt.Println(lives, "\nYour Health: [ ❤️ ❤️ ❤️ ]")
 
 	fmt.Println("\nThe Voice: The Kraken attacks from the left.")
 
 	var move string
 
-	fmt.Printf("Your Move:\t")
+	fmt.Printf("Enter:\t")
 	fmt.Scan(&move)
 
 	if move == "A" {
-		fmt.Println("Attack evaded")
+		fmt.Println("\nAttack evaded")
 	} else if move == "a" {
-		fmt.Println("Attack evaded")
+		fmt.Println("\nAttack evaded")
 	} else if move != "A" {
-		fmt.Println("You Got Hit!")
+		fmt.Println("\nYou Got Hit! [ ❤️ ❤️ ]")
 	} else if move != "a" {
-		fmt.Println("You Got Hit")
+		fmt.Println("\nYou Got Hit! [ ❤️ ❤️ ]")
 	}
 
 	var attack string
 
-	fmt.Printf("\nYour Turn:\t")
+	fmt.Println("YOUR TURN")
+	fmt.Println("\nStrike: S")
+	fmt.Println("Punch: P")
+
+	fmt.Printf("\nEnter:\t")
 	fmt.Scan(&attack)
 
-	if attack == "Shoot" {
-		fmt.Println("Kraken: 🖤 🖤 🖤")
-	} else if attack == "Punch" {
-		fmt.Println("You missed")
+	if attack == "S" {
+		fmt.Println("\nYou chopped off a tentacle. 🐙: [🖤🖤🖤🖤]")
+	} else if attack == "P" {
+		fmt.Println("\n🐙: You Missed Me")
+
+		fmt.Println("\nThe Voice: Use Melee to deal heavy damage to enemies")
 	}
+
+	fmt.Println("\nThe Kraken opens its mouth and spits out Octo-goo 💦")
+
+	var move1 string
+
+	fmt.Println("\nMake a move:")
+	fmt.Println("Evade: E")
+	fmt.Println("Strike: S")
+	fmt.Println("\n ")
+
+	fmt.Printf("Enter:\t")
+	fmt.Scan(&move1)
+
+	if move1 == "E" {
+		fmt.Println("\nAttack evaded")
+	} else if move1 == "e" {
+		fmt.Println("\nAttack evaded")
+	} else if move1 == "S" {
+		fmt.Println("\nYou Got Hit! [ ❤️ ]")
+	} else if move1 == "s" {
+		fmt.Println("\nYou Got Hit! [ ❤️ ]")
+	}
+
+	
+
+
+
 }
