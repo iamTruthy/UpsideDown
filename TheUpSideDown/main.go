@@ -138,10 +138,52 @@ func main() {
 	} else if move1 == "s" {
 		fmt.Println("\nYou Got Hit! Game over: [ 💔 ] ")
 	}
+	
+	
 
 	// End The Game If Player Does not Evade the Enemy Attack
 	if move1 != "E" {
 		return
+	}
+
+	var attack1 string
+
+	fmt.Println("\nThe Kraken Launches at you from the Top")
+
+	fmt.Println("\nStrike: S")
+	fmt.Println("Parry: P")
+	fmt.Println("Block: B")
+	fmt.Println("Evade: E")
+
+	fmt.Printf("\nEnter:\t")
+	fmt.Scan(&attack1)
+
+	if attack1 == "S" {
+		fmt.Println("\nYou Got Hit! Game over: [ 💔 ] ")
+	} else if attack1 == "P" {
+		fmt.Println("You Deflected its attack you see an opening")
+	} else if attack1 == "B" {
+		fmt.Println("You Blocked its attack")
+	} else if attack1 == "E" {
+		fmt.Println("Attack Evaded")
+	} 
+
+	if attack1 == "S" {
+		return
+	}
+
+	var chance string
+
+	if attack1 == "P" {
+		fmt.Println("Strike: S")
+		fmt.Printf("\nEnter:\t")
+		fmt.Scan(&chance)
+
+		fmt.Println("\nYou chopped off a tentacle. 🐙: [🖤🖤]")
+	}
+
+	if attack1 == "B" {
+		fmt.Println()
 	}
 
 }
