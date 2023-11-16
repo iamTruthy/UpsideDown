@@ -23,23 +23,34 @@ func main() {
 
 	if choice == "yes" {
 		fmt.Println("Hahahaha...")
+	} else if choice == "no" {
+		return
 	} else {
+		fmt.Println("Invalid Entry")
+	}
+
+	if choice != "yes" {
 		return
 	}
 
 	fmt.Println("\nSolve the riddle:Hey baby, if you've got this methods then, you're my type")
-	fmt.Printf("Enter your answer:\t")
 
 	var answer string = "interface"
 
+	fmt.Printf("Enter your answer:\t")
+	fmt.Scan(&answer)
+
 	if answer == "interface" {
-		fmt.Scan(&answer)
-	} else {
+		fmt.Printf("\nChoose A Weapon:\n")
+	} else if answer != "interface" {
+		fmt.Println("Invalid Entry")
+	}
+
+	if answer != "interface" {
 		return
 	}
 
 	var weapon string
-	fmt.Printf("\nChoose A Weapon:\n")
 
 	weapon1 := "Axe"
 	fmt.Println(weapon1, " 🪓")
@@ -54,16 +65,16 @@ func main() {
 	fmt.Scan(&weapon)
 
 	if weapon == "Axe" {
-		fmt.Println("Player selected: your weapon is an 🪓")
+		fmt.Println("Weapon selected: your weapon is an Axe 🪓")
 	} else if weapon == "Sword" {
-		fmt.Println("Player selected: your weapon is a Sword 🗡️")
+		fmt.Println("Weapon selected: your weapon is a Sword 🗡️")
 	} else if weapon == "Arrow" {
-		fmt.Println("Player selected: your weapon is an Arrow 🏹")
+		fmt.Println("Weapon selected: your weapon is an Arrow 🏹")
 	} else {
 		return
 	}
 
-	fmt.Println("\n----------------------------------    LEVEL 1    -----------------------------------------------")
+	fmt.Println("\n----------------------------------    START   -----------------------------------------------")
 
 	fmt.Println("You're in the DemiGorgon's lair. You are attacked by one of his minions. ")
 	fmt.Println("\n                        THE KRAKEN 🐙   [🖤🖤🖤🖤]     ")
@@ -86,10 +97,12 @@ func main() {
 		fmt.Println("\nThe Voice: Attack evaded")
 	} else if move == "e" {
 		fmt.Println("\nThe Voice: Attack evaded")
-	} else if move != "E" {
-		fmt.Println("\nYou Got Hit! Game over: [ 💔 ] ")
-	} else if move != "e" {
-		fmt.Println("\nYou Got Hit! Game over: [ 💔 ] ")
+	} else if move != "S" {
+		fmt.Println("\nThe Kraken threw a surprise attack, You Got Hit! Game over: [ 💔 ] ")
+	} else if move != "s" {
+		fmt.Println("\nThe Kraken threw a surprise attack, You Got Hit! Game over: [ 💔 ] ")
+	} else {
+		fmt.Println("Invalid Entry")
 	}
 
 	// End The Game If Player Does not Evade the Enemy Attack
@@ -112,7 +125,14 @@ func main() {
 		fmt.Println("\nYou chopped off a tentacle. 🐙: [🖤🖤🖤]")
 	} else if attack == "P" {
 		fmt.Println("\n🐙: You Missed Me")
-		fmt.Println("\nThe Voice: Use Melee to deal heavy damage to enemies")
+		fmt.Println("\nYou Got Hit! Game over: [ 💔 ] ")
+	} else {
+		fmt.Println("Invalid Entry")
+	}
+
+	// End The Game If Player Makes a Wrong Choice
+	if attack != "S" {
+		return
 	}
 
 	fmt.Println("\nThe Kraken opens its mouth and spits out Octo-goo 💦")
@@ -137,9 +157,9 @@ func main() {
 		fmt.Println("\nYou Got Hit! Game over: [ 💔 ] ")
 	} else if move1 == "s" {
 		fmt.Println("\nYou Got Hit! Game over: [ 💔 ] ")
+	} else {
+		fmt.Println("Invalid Entry")
 	}
-	
-	
 
 	// End The Game If Player Does not Evade the Enemy Attack
 	if move1 != "E" {
@@ -161,12 +181,14 @@ func main() {
 	if attack1 == "S" {
 		fmt.Println("\nYou Got Hit! Game over: [ 💔 ] ")
 	} else if attack1 == "P" {
-		fmt.Println("You Deflected its attack you see an opening")
+		fmt.Println("\nYou Deflected its attack you see an opening")
 	} else if attack1 == "B" {
 		fmt.Println("You Blocked its attack")
 	} else if attack1 == "E" {
 		fmt.Println("Attack Evaded")
-	} 
+	} else {
+		fmt.Println("Invalid Entry")
+	}
 
 	if attack1 == "S" {
 		return
